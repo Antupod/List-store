@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+ul, 
+li {
+    margin: 1.5em;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Bad Script', cursive;
+    font-size: 10px;
+    
+    background: #eeeec9;
+}
+
+button {
+    cursor: pointer;
+}
+
+.list-img {
+    width: 2em;
+    height: 3em;
+}
+
+.main-list {
+    width: 60em;
+    min-height: 80em;
+
+    margin: 0 auto;
+    position: relative;
+}
+
+.list-container {
+    min-height: 80em;
+    padding-bottom: 11.5em;
+    
+    background: #fdffcc;
+    border: 2.5em solid #EDC339;
+
+    text-align: center;
+}
+
+.list-title {
+    font-size: 4em;
+
+    color:#42cbec;
+    background: #d4ecf9;
+}
+
+.list-add-container {
+    display: flex;
+    justify-content: center;
+}
+
+.list-add {
+    width: 35em;
+    height: 3em;
+}
+
+.list-submit {
+    width: 3em;
+    height: 3em;
+    background: #dcec94;
+}
+
+.list-element {
+    display: flex;
+    justify-content: space-between;
+    max-width: 47.5em;
+    
+    word-break: break-all;
+    font-size: 1.5em;
+
+    border-bottom: 1px solid rgb(252, 185, 61);
+}
+
+.list-element-text {
+    font-size: 2em;
+}
+
+.list-delete {
+    background: #EF7663;
+}
+
+.list-clear {
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    right: 45%;
+
+    background: #6edbfc;
+}
