@@ -1,41 +1,38 @@
 function listShop()  {
-    const list = document.querySelector('.list');
-    const addList = document.querySelector('.list-submit');
+    const addListItem = document.querySelector('.list-submit');
     const clearList = document.querySelector('.list-clear');
-    const addText = document.querySelector('.list-add');
+    const deleteListItem = document.querySelector('.list-delete');
+    document.querySelector('.list-add-container').e.preventDefault()
 
-    function createList() {
-        if(!addText.value) return;
+    addListItem.addEventListener('click', createList);
+    deleteListItem.addEventListener('click', removeListItem);
+    clearList.addEventListener('click', clearListSheet);
+}
 
-        const elementList = document.createRange().createContextualFragment(
-            `
+function createList() {
+    const list = document.querySelector('.list');
+    const textFromListInput = document.querySelector('.list-add');
+
+    const elementList = document.createRange().createContextualFragment(
+        `
                 <li class="list-element">
-                    <span class="list-element-text">${addText.value}</span>
+                    <span class="list-element-text">${textFromListInput.value}</span>
                     <button class="list-delete">
                         <img class="list-img" src="img/delete.svg" alt="delete" width="30" height="40">
                     </button>
                 </li>
             `);
 
-        list.appendChild(elementList);
-        addText.value = ''; 
-    }
-
-    function removeListItem(evt) {
-        let element = evt.target.closest('.list-delete');
-        
-        if (!element) return;
-        
-        element.parentElement.remove();
-    }
-
-    function clearListSheet() {
-        list.innerHTML = '';
-    };
-
-    addList.addEventListener('click', createList);
-    list.addEventListener('click', removeListItem);
-    clearList.addEventListener('click', clearListSheet);
+    list.appendChild(elementList);
+    textFromListInput.value = '';
 }
 
-document.addEventListener("DOMContentLoaded", listShop);
+function removeListItem(deleteListItem) {
+    deleteListItem.parentElement.remove();
+}
+
+function clearListSheet(list) {
+    list.innerHTML = '';
+}
+
+listShop();

@@ -23,6 +23,7 @@ body {
 
 button {
     cursor: pointer;
+    border: none;
 }
 
 .list-img {
@@ -32,14 +33,14 @@ button {
 
 .main-list {
     width: 60em;
-    min-height: 80em;
+    min-height: 100vh;
 
     margin: 0 auto;
     position: relative;
 }
 
 .list-container {
-    min-height: 80em;
+    min-height: 100vh;
     padding-bottom: 11.5em;
     
     background: #fdffcc;
